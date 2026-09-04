@@ -1,0 +1,62 @@
+:root {
+  --bg: #0c0c0e;
+  --body-fill: #1b1c1f;
+  --btn-fill: #232428;
+  --btn-active: #34363c;
+  --ic: #d8d9dc;
+  --ring: #2c2d31;
+  --accent: #4fa8ff;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, Roboto, sans-serif;
+}
+
+.status {
+  color: #8a8d93;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 10px 0 4px;
+}
+.status.connected { color: var(--accent); }
+
+#remote {
+  width: 100%;
+  max-width: 340px;
+  touch-action: manipulation;
+}
+
+.body { fill: var(--body-fill); }
+
+.btn { cursor: pointer; }
+.btn circle, .btn rect, .btn path.arrow-shape { fill: var(--btn-fill); transition: fill .08s; }
+.btn.active circle, .btn.active rect { fill: var(--btn-active); }
+
+.btn .ic { stroke: var(--ic); }
+.lbl { fill: var(--ic); font-size: 20px; text-anchor: middle; font-weight: 600; pointer-events: none; }
+.lbl.small { font-size: 13px; letter-spacing: .05em; }
+
+.dpad-ring { fill: #131316; stroke: var(--ring); stroke-width: 2; }
+.btn.arrow path { fill: #3a3c42; }
+.btn.arrow.active path { fill: var(--btn-active); }
+.btn.ok circle { fill: var(--btn-fill); stroke: var(--ring); stroke-width: 2; }
+.crosshair { fill: var(--accent); opacity: .8; }
+
+.rocker-bg { fill: #17181b; }
+.rocker-half rect { fill: transparent; }
+.rocker-half.active rect { fill: var(--btn-active); }
+.rocker text.lbl { pointer-events: none; }
+
+.app-pill rect { fill: var(--btn-fill); }
+.app-pill.active rect { fill: var(--btn-active); }
+
+.brand { fill: #55575d; font-size: 15px; letter-spacing: .12em; text-anchor: middle; }
